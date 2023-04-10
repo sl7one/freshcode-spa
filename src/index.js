@@ -8,7 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const publicRoutes = createBrowserRouter([
    {
-      path: '/',
+      path: '/freshcode-spa',
       element: <App />,
    },
    {
