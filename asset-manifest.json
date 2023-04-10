@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/freshcode-spa/static/css/main.12f3c076.css",
-    "main.js": "/freshcode-spa/static/js/main.f449bd3c.js",
+    "main.js": "/freshcode-spa/static/js/main.c22a9a6c.js",
     "static/media/hero.png": "/freshcode-spa/static/media/hero.8b1f542cc42d69a3abfb.png",
     "static/media/scene2.jpg": "/freshcode-spa/static/media/scene2.5e502d40f87e1453c4d5.jpg",
     "static/media/scene1.jpg": "/freshcode-spa/static/media/scene1.6b2e257947ecb1a17900.jpg",
@@ -14,10 +14,10 @@
     "static/media/svg-sprite.svg": "/freshcode-spa/static/media/svg-sprite.2e19ad8a5363a45336def33eba88b16f.svg",
     "index.html": "/freshcode-spa/index.html",
     "main.12f3c076.css.map": "/freshcode-spa/static/css/main.12f3c076.css.map",
-    "main.f449bd3c.js.map": "/freshcode-spa/static/js/main.f449bd3c.js.map"
+    "main.c22a9a6c.js.map": "/freshcode-spa/static/js/main.c22a9a6c.js.map"
   },
   "entrypoints": [
     "static/css/main.12f3c076.css",
-    "static/js/main.f449bd3c.js"
+    "static/js/main.c22a9a6c.js"
   ]
 }
