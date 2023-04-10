@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.12f3c076.css",
-    "main.js": "/static/js/main.2243f081.js",
-    "static/media/hero.png": "/static/media/hero.8b1f542cc42d69a3abfb.png",
-    "static/media/scene2.jpg": "/static/media/scene2.5e502d40f87e1453c4d5.jpg",
-    "static/media/scene1.jpg": "/static/media/scene1.6b2e257947ecb1a17900.jpg",
-    "static/media/scene3.jpg": "/static/media/scene3.0883f2ed43093fd95e62.jpg",
-    "static/media/gift.png": "/static/media/gift.928939f906718d04398a.png",
-    "static/media/bg5.png": "/static/media/bg5.ce23a55614d90d488347.png",
-    "static/media/bg.png": "/static/media/bg.58acbe1f931fa8134e97.png",
-    "static/media/bg6.png": "/static/media/bg6.3071d6202a32112f94be.png",
-    "static/media/email.png": "/static/media/email.695d9349d97bfadc8258.png",
-    "static/media/svg-sprite.svg": "/static/media/svg-sprite.2e19ad8a5363a45336def33eba88b16f.svg",
-    "index.html": "/index.html",
-    "main.12f3c076.css.map": "/static/css/main.12f3c076.css.map",
-    "main.2243f081.js.map": "/static/js/main.2243f081.js.map"
+    "main.css": "/freshcode-spa/static/css/main.12f3c076.css",
+    "main.js": "/freshcode-spa/static/js/main.f449bd3c.js",
+    "static/media/hero.png": "/freshcode-spa/static/media/hero.8b1f542cc42d69a3abfb.png",
+    "static/media/scene2.jpg": "/freshcode-spa/static/media/scene2.5e502d40f87e1453c4d5.jpg",
+    "static/media/scene1.jpg": "/freshcode-spa/static/media/scene1.6b2e257947ecb1a17900.jpg",
+    "static/media/scene3.jpg": "/freshcode-spa/static/media/scene3.0883f2ed43093fd95e62.jpg",
+    "static/media/gift.png": "/freshcode-spa/static/media/gift.928939f906718d04398a.png",
+    "static/media/bg5.png": "/freshcode-spa/static/media/bg5.ce23a55614d90d488347.png",
+    "static/media/bg.png": "/freshcode-spa/static/media/bg.58acbe1f931fa8134e97.png",
+    "static/media/bg6.png": "/freshcode-spa/static/media/bg6.3071d6202a32112f94be.png",
+    "static/media/email.png": "/freshcode-spa/static/media/email.695d9349d97bfadc8258.png",
+    "static/media/svg-sprite.svg": "/freshcode-spa/static/media/svg-sprite.2e19ad8a5363a45336def33eba88b16f.svg",
+    "index.html": "/freshcode-spa/index.html",
+    "main.12f3c076.css.map": "/freshcode-spa/static/css/main.12f3c076.css.map",
+    "main.f449bd3c.js.map": "/freshcode-spa/static/js/main.f449bd3c.js.map"
   },
   "entrypoints": [
     "static/css/main.12f3c076.css",
-    "static/js/main.2243f081.js"
+    "static/js/main.f449bd3c.js"
   ]
 }
