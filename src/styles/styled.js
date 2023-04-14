@@ -39,9 +39,22 @@ export const NavItem = styled.li`
    &:last-child {
       a {
          text-transform: uppercase;
-         background-color: ${colors.mainBlue};
+         background: linear-gradient(
+            -45deg,
+            rgba(122, 229, 253, 1) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(122, 229, 253, 1) 100%
+         );
+
          border-radius: 87px;
          padding: 21px 28px;
+         background-size: 200%;
+         background-position: bottom 100% left 200%;
+         transition: background-position 350ms ease-in-out;
+
+         &:hover {
+            background-position: bottom 0% left 50%;
+         }
       }
    }
 `;
@@ -165,10 +178,25 @@ export const List = styled.ul`
 
 export const MainBtn = styled.button`
    text-transform: uppercase;
-   background-color: ${colors.mainBlue};
+   background: linear-gradient(
+      -45deg,
+      rgba(122, 229, 253, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(122, 229, 253, 1) 100%
+   );
+
    border-radius: 87px;
    padding: 21px 28px;
+   background-size: 200%;
+   background-position: bottom 100% left 200%;
+   transition: background-position 350ms ease-in-out;
+
    margin: 0 auto;
+   box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px 0px;
+
+   &:hover {
+      background-position: bottom 0% left 50%;
+   }
 `;
 
 export const GiftSection = styled.section`
@@ -212,6 +240,7 @@ export const GiftSectionBox = styled.div`
 export const BottomSectionBox = styled.div`
    width: 490px;
    margin: 0 auto;
+   padding-bottom: 160px;
    h2 {
       font-size: 60px;
       font-weight: 400;
@@ -258,8 +287,8 @@ export const BottomSectionBox = styled.div`
 export const FooterBox = styled.div`
    background-image: url(${footerImg});
    background-repeat: no-repeat;
-   background-size: 70%;
-   background-position: top 0 left 0;
+   background-size: 40%;
+   background-position: top -100px left 0;
    background-color: ${colors.mainYelow};
    padding: 60px 0 120px 0;
 `;
@@ -321,10 +350,24 @@ export const FooterWrapperBottom = styled.div`
 
       button {
          text-transform: uppercase;
-         background-color: ${colors.mainBlue};
+         background: linear-gradient(
+            -45deg,
+            rgba(122, 229, 253, 1) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(122, 229, 253, 1) 100%
+         );
+
          border-radius: 87px;
          padding: 21px 28px;
+         background-size: 200%;
+         background-position: bottom 100% left 200%;
+         transition: background-position 350ms ease-in-out;
          margin-top: 30px;
+         box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px 0px;
+
+         &:hover {
+            background-position: bottom 0% left 50%;
+         }
       }
    }
 `;

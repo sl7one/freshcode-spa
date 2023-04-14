@@ -31,7 +31,7 @@ export const App = () => {
             <Hero />
             <Container>
                <section>
-                  <MainSectionBox>
+                  <MainSectionBox name="programm">
                      <h2>Програма фестивалю</h2>
                      <p>3 сцени, щоб добре й із задоволенням провести час</p>
                      <p>
@@ -88,7 +88,7 @@ export const App = () => {
                      />
                   </GiftSectionBox>
                </GiftSection>
-               <section>
+               <section name="howtoget">
                   <BottomSectionBox>
                      <h2>Як потрапити</h2>
                      <p>
@@ -106,24 +106,60 @@ export const App = () => {
                </section>
             </Container>
          </main>
-         <footer>
+         <footer name="contacts">
             <FooterBox>
                <Container>
                   <FooterWrapperTop>
                      <h2>Контакти</h2>
                      <div style={{ width: '50%' }}>
-                        <p>
-                           Якщо у вас виникають питання – <br /> телефонуйте за номером
-                        </p>
-                        <a href="tel:+380987654321">
-                           <svg
-                              width={32}
-                              height={32}
+                        <div>
+                           <p>
+                              Якщо у вас виникають питання – <br /> телефонуйте за номером
+                           </p>
+                           <a href="tel:+380987654321">
+                              <svg
+                                 width={32}
+                                 height={32}
+                              >
+                                 <use href={icons + '#icon-phone'}></use>
+                              </svg>
+                              <span>0-987-654-321</span>
+                           </a>
+                        </div>
+                        <div style={{ marginTop: '55px' }}>
+                           <p>Або пишіть нам у чат-бот</p>
+                           <div
+                              style={{
+                                 display: 'flex',
+                                 gap: '15px',
+                              }}
                            >
-                              <use href={icons + '#icon-phone'}></use>
-                           </svg>
-                           <span>0-987-654-321</span>
-                        </a>
+                              <a
+                                 href="https://web.telegram.org/"
+                                 target="_blank"
+                                 rel="noreferrer"
+                              >
+                                 <svg
+                                    width={32}
+                                    height={32}
+                                 >
+                                    <use href={icons + '#icon-telegram'}></use>
+                                 </svg>
+                              </a>
+                              <a
+                                 href="https://www.viber.com/"
+                                 target="_blank"
+                                 rel="noreferrer"
+                              >
+                                 <svg
+                                    width={32}
+                                    height={32}
+                                 >
+                                    <use href={icons + '#icon-viber'}></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
                      </div>
                   </FooterWrapperTop>
                   <FooterWrapperBottom>

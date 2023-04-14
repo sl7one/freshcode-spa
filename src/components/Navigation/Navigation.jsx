@@ -1,6 +1,12 @@
-import { NavLink } from 'react-router-dom';
 import { Container, Header, HeaderBox, NavItem, NavList } from 'styles/styled';
 import icons from '../../assets/svg-sprite.svg';
+import Scroll from 'react-scroll';
+const scroller = Scroll.scroller;
+const scrollerOptions = {
+   duration: 1500,
+   delay: 100,
+   smooth: true,
+};
 
 export const Navigation = () => {
    return (
@@ -16,16 +22,47 @@ export const Navigation = () => {
                <nav>
                   <NavList>
                      <NavItem>
-                        <NavLink to="contacts">Контакти</NavLink>
+                        <a
+                           href={
+                              // eslint-disable-next-line
+                              '#'
+                           }
+                           onClick={() => scroller.scrollTo('contacts', scrollerOptions)}
+                        >
+                           Контакти
+                        </a>
                      </NavItem>
                      <NavItem>
-                        <NavLink to="main">Головна</NavLink>
+                        <a
+                           href={
+                              // eslint-disable-next-line
+                              '#'
+                           }
+                        >
+                           Головна
+                        </a>
                      </NavItem>
                      <NavItem>
-                        <NavLink to="programm">Програма</NavLink>
+                        <a
+                           href={
+                              // eslint-disable-next-line
+                              '#'
+                           }
+                           onClick={() => scroller.scrollTo('programm', scrollerOptions)}
+                        >
+                           Програма
+                        </a>
                      </NavItem>
                      <NavItem>
-                        <NavLink to="signup">Як потрапити</NavLink>
+                        <a
+                           href={
+                              // eslint-disable-next-line
+                              '#'
+                           }
+                           onClick={() => scroller.scrollTo('howtoget', scrollerOptions)}
+                        >
+                           Як потрапити
+                        </a>
                      </NavItem>
                   </NavList>
                </nav>

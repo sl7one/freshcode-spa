@@ -11,28 +11,11 @@ const publicRoutes = createBrowserRouter([
       path: '/freshcode-spa',
       element: <App />,
    },
-   {
-      path: '/contacts',
-      element: <div>CONTACTS</div>,
-   },
-   {
-      path: '/main',
-      element: <div>MAIN</div>,
-   },
-   {
-      path: '/programm',
-      element: <div>PROGRAMM</div>,
-   },
-   {
-      path: '/signup',
-      element: <div>HOW TO GET</div>,
-   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    // <React.StrictMode>
-
    <RouterProvider router={publicRoutes} />
    // </React.StrictMode>
 );
