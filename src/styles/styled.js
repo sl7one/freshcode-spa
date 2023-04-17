@@ -11,16 +11,25 @@ const border = {
 };
 
 export const Container = styled.div`
-   padding: 0 100px 0 100px;
-   max-width: 1440px;
+   max-width: 390px;
+   padding: 0 20px 0 20px;
    margin: 0 auto;
+
+   @media (min-width: 390px) {
+      max-width: 1440px;
+      padding: 0 100px 0 100px;
+   }
 `;
 
 export const Header = styled.header`
    position: absolute;
    z-index: 1;
    width: 100%;
-   margin-top: 64px;
+   margin-top: 20px;
+
+   @media (min-width: 390px) {
+      margin-top: 64px;
+   }
 `;
 
 export const HeaderBox = styled.div`
@@ -37,7 +46,7 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
    &:last-child {
-      a {
+      button {
          text-transform: uppercase;
          background: linear-gradient(
             -45deg,
@@ -60,36 +69,53 @@ export const NavItem = styled.li`
 `;
 
 export const HeroBox = styled.div`
-   padding: 200px 0 150px 0;
+   padding: 100px 0 280px 0;
    position: relative;
+   overflow: hidden;
+
+   @media (min-width: 390px) {
+      padding: 200px 0 150px 0;
+   }
+
    p {
-      width: 460px;
       line-height: 1.2;
       margin-top: 64px;
+      @media (min-width: 390px) {
+         width: 480px;
+      }
    }
 `;
 
 export const HeroImg = styled.img`
    position: absolute;
-   top: 0;
+   bottom: 0;
    right: 0;
-   width: 1030px;
+   max-width: 1030px;
    height: auto;
+
+   @media (min-width: 390px) {
+      top: 0;
+   }
 `;
 
 export const BgImg = styled.img`
    position: absolute;
-   top: 0;
+   bottom: 0;
    left: 0;
-   transform: rotate(180deg);
+   transform: rotate(0);
    z-index: -2;
-   width: 800px;
-   height: 600px;
+   min-width: 580px;
+
+   @media (min-width: 390px) {
+      top: 0;
+      transform: rotate(180deg);
+      max-width: 800px;
+   }
 `;
 
 export const HeroText = styled.h1`
-   width: 700px;
-   font-size: 93px;
+   width: 350px;
+   font-size: 50px;
    color: #9ad2de;
    font-weight: 800;
    letter-spacing: -0.02em;
@@ -98,32 +124,57 @@ export const HeroText = styled.h1`
    background: -webkit-linear-gradient(#ebe134, rgb(122, 229, 253));
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+
+   @media (min-width: 390px) {
+      width: 700px;
+      font-size: 93px;
+   }
 `;
 
-export const MainSectionBox = styled.div`
+export const MainSectionBox = styled.section`
    margin-bottom: 70px;
-   padding: 70px 0;
+   padding: 40px 20px;
    border-radius: 50px;
    background-color: ${colors.mainBlue};
    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
    border: ${border.options};
 
+   @media (min-width: 390px) {
+      padding: 70px 20px;
+   }
+
    h2 {
-      font-size: 60px;
+      font-size: 40px;
       font-weight: 400;
-      text-align: center;
+      text-align: left;
       text-transform: uppercase;
+
+      @media (min-width: 390px) {
+         font-size: 60px;
+         text-align: center;
+      }
    }
    p {
-      margin-top: 10px;
+      margin-top: 17px;
       font-size: 27px;
-      text-align: center;
+      text-align: left;
+
+      @media (min-width: 390px) {
+         font-size: 20px;
+         text-align: center;
+      }
 
       &:last-child {
-         font-size: 20px;
+         font-size: 16px;
          color: #73a6b1;
-         width: 590px;
-         margin: 20px auto 0 auto;
+         margin: 27px auto 0 auto;
+         text-align: left;
+
+         @media (min-width: 390px) {
+            font-size: 20px;
+            text-align: center;
+            width: 580px;
+         }
       }
    }
 `;
@@ -131,32 +182,51 @@ export const MainSectionBox = styled.div`
 export const SectionBox = styled.section`
    margin-bottom: 30px;
    background-image: url(${img});
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
-   background-size: 63%;
-   background-position: right 0 bottom 50%;
-   padding: 40px 40px 70px 40px;
-`;
+   padding: 40px 0px 70px 0px;
 
-export const Wrapper = styled.div`
-   display: flex;
-   justify-content: space-between;
-   margin-top: 45px;
+   @media (min-width: 390px) {
+      padding: 40px 40px 70px 40px;
+      background-size: 63%;
+      background-position: right 0 bottom 50%;
+      background-size: contain;
+   }
 
    img {
       border: ${border.options};
       border-radius: 50px;
       box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
-      width: 580px;
-      height: 425px;
+      width: 350px;
+      margin-bottom: 45px;
+
+      @media (min-width: 390px) {
+         width: 580px;
+         margin-bottom: unset;
+      }
+   }
+`;
+
+export const Wrapper = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 45px;
+
+   @media (min-width: 390px) {
+      flex-direction: row;
    }
 `;
 
 export const H3 = styled.h3`
    font-weight: 400;
-   font-size: 46px;
+   font-size: 30px;
    letter-spacing: -0.02em;
    text-transform: uppercase;
+
+   @media (min-width: 390px) {
+      font-size: 46px;
+   }
 `;
 
 export const List = styled.ul`
@@ -211,54 +281,94 @@ export const GiftSection = styled.section`
 export const GiftSectionBox = styled.div`
    border-radius: 50px;
    background-color: ${colors.mainBlue};
-   padding: 85px 40px;
+   padding: 180px 20px 40px 20px;
    width: 100%;
    border: ${border.options};
    position: relative;
    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px 0px;
 
+   @media (min-width: 390px) {
+      padding: 85px 40px;
+   }
+
    p {
-      width: 400px;
-      font-size: 28px;
+      font-size: 20px;
+      text-align: center;
+      @media (min-width: 390px) {
+         font-size: 28px;
+         width: 460px;
+         text-align: left;
+         margin-left: 100px;
+      }
    }
 
    img {
       position: absolute;
-      top: -35%;
-      right: 100px;
-      width: 430px;
+      top: -65%;
+      right: 0;
+      width: 340px;
+
+      @media (min-width: 390px) {
+         top: -35%;
+         right: 100px;
+         width: 430px;
+      }
 
       &:nth-child(2) {
-         top: -33%;
-         right: 93px;
+         top: -65%;
+         right: 0;
          filter: brightness(0) blur(8px);
          opacity: 0.5;
+
+         @media (min-width: 390px) {
+            top: -33%;
+            right: 93px;
+         }
       }
    }
 `;
 
 export const BottomSectionBox = styled.div`
-   width: 490px;
    margin: 0 auto;
    padding-bottom: 160px;
+
+   @media (min-width: 390px) {
+      width: 490px;
+   }
+
    h2 {
-      font-size: 60px;
+      font-size: 50px;
       font-weight: 400;
-      text-align: center;
+      text-align: left;
       text-transform: uppercase;
+
+      @media (min-width: 390px) {
+         font-size: 60px;
+         text-align: center;
+         white-space: nowrap;
+      }
    }
    p {
-      font-size: 20px;
+      font-size: 16px;
       margin-top: 20px;
       color: #73a6b1;
-      text-align: center;
+      text-align: left;
       margin-bottom: 70px;
+
+      @media (min-width: 390px) {
+         font-size: 20px;
+         text-align: center;
+      }
 
       &:nth-of-type(2) {
          margin-top: 77px;
-         font-size: 27px;
+         font-size: 20px;
          text-align: center;
          color: black;
+
+         @media (min-width: 390px) {
+            font-size: 27px;
+         }
       }
 
       &:last-of-type {
@@ -287,21 +397,75 @@ export const BottomSectionBox = styled.div`
 export const FooterBox = styled.div`
    background-image: url(${footerImg});
    background-repeat: no-repeat;
-   background-size: 40%;
-   background-position: top -100px left 0;
+   background-size: 60%;
+   background-position: top 15px left 0;
    background-color: ${colors.mainYelow};
    padding: 60px 0 120px 0;
+
+   @media (min-width: 390px) {
+      background-position: top -100px left 0;
+      background-size: 60%;
+   }
+
+   svg {
+      fill: rgb(122, 229, 253);
+   }
 `;
 
 export const FooterWrapperTop = styled.div`
-   display: flex;
-   padding: 40px;
+   padding: 40px 0;
+
+   @media (min-width: 390px) {
+      display: flex;
+      padding: 40px;
+   }
+
+   svg {
+      transition: transform 350ms ease-in-out;
+      &:hover {
+         transform: scale(1.2);
+      }
+   }
 
    h2 {
       width: 50%;
-      font-size: 60px;
+      font-size: 50px;
       font-weight: 400;
       text-transform: uppercase;
+
+      @media (min-width: 390px) {
+         font-size: 60px;
+      }
+   }
+
+   div {
+      width: 100%;
+      @media (min-width: 390px) {
+         width: 50%;
+      }
+
+      div {
+         width: 100%;
+      }
+
+      div[name='links'] {
+         margin-top: 55px;
+
+         div {
+            display: flex;
+            gap: 15px;
+         }
+      }
+   }
+
+   p {
+      font-size: 16px;
+      margin-top: 40px;
+
+      @media (min-width: 390px) {
+         font-size: 20px;
+         margin-top: unset;
+      }
    }
 
    a {
@@ -321,19 +485,38 @@ export const FooterWrapperTop = styled.div`
 export const FooterWrapperBottom = styled.div`
    background-color: white;
    border-radius: 50px;
-   padding: 40px;
-   display: flex;
+   padding: 20px;
+
+   @media (min-width: 390px) {
+      padding: 40px;
+   }
+
+   @media (min-width: 390px) {
+      display: flex;
+   }
 
    img {
-      width: 50%;
+      @media (min-width: 390px) {
+         width: 50%;
+      }
    }
 
    form {
-      width: 50%;
-      font-size: 20px;
+      width: 100%;
+      margin-top: 70px;
+
+      @media (min-width: 390px) {
+         width: 50%;
+         margin-top: unset;
+      }
 
       p {
-         font-size: 27px;
+         font-size: 20px;
+
+         @media (min-width: 390px) {
+            font-size: 27px;
+            width: 455px;
+         }
       }
 
       input {
@@ -362,7 +545,7 @@ export const FooterWrapperBottom = styled.div`
          background-size: 200%;
          background-position: bottom 100% left 200%;
          transition: background-position 350ms ease-in-out;
-         margin-top: 30px;
+         margin: 30px auto;
          box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px 0px;
 
          &:hover {

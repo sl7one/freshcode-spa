@@ -22,53 +22,79 @@ import scene3 from '../../assets/img/scene3.jpg';
 import gift from '../../assets/img/gift.png';
 import email from '../../assets/img/email.png';
 import icons from '../../assets/svg-sprite.svg';
+import { UseMedia } from 'utils/hooks/useMedia';
 
 export const App = () => {
+   const { isDesktop } = UseMedia();
+
    return (
       <>
          <Navigation />
          <main>
             <Hero />
             <Container>
-               <section>
-                  <MainSectionBox name="programm">
-                     <h2>Програма фестивалю</h2>
-                     <p>3 сцени, щоб добре й із задоволенням провести час</p>
-                     <p>
-                        Усі сцени розташовані так, щоб вам було зручно ходити між ними, і
-                        вони одна одну не глушили
-                     </p>
-                  </MainSectionBox>
-               </section>
+               <MainSectionBox name="programm">
+                  <h2>Програма фестивалю</h2>
+                  <p>3 сцени, щоб добре й із задоволенням провести час</p>
+                  <p>
+                     Усі сцени розташовані так, щоб вам було зручно ходити між ними, і
+                     вони одна одну не глушили
+                  </p>
+               </MainSectionBox>
+
                <Section>
-                  <SectionTitle title="Сцена Перемоги" />
-                  <p style={{ marginTop: '10px' }}>Розбудова України після війни</p>
-                  <Wrapper>
-                     <SceneList list={sceneVictory} />
+                  {!isDesktop && (
                      <img
                         src={scene1}
                         alt=""
                      />
+                  )}
+                  <SectionTitle title="Сцена Перемоги" />
+                  <p style={{ marginTop: '10px' }}>Розбудова України після війни</p>
+                  <Wrapper>
+                     <SceneList list={sceneVictory} />
+                     {isDesktop && (
+                        <img
+                           src={scene1}
+                           alt=""
+                        />
+                     )}
                   </Wrapper>
                </Section>
                <Section>
-                  <SectionTitle title='Сцена "Музикa"' />
-                  <Wrapper>
-                     <SceneList list={sceneMusic} />
+                  {!isDesktop && (
                      <img
                         src={scene2}
                         alt=""
                      />
+                  )}
+                  <SectionTitle title='Сцена "Музикa"' />
+                  <Wrapper>
+                     <SceneList list={sceneMusic} />
+                     {isDesktop && (
+                        <img
+                           src={scene2}
+                           alt=""
+                        />
+                     )}
                   </Wrapper>
                </Section>
                <Section>
-                  <SectionTitle title='Сцена "Майстер-класи для дітей"' />
-                  <Wrapper>
-                     <SceneList list={sceneMasterClass} />
+                  {!isDesktop && (
                      <img
                         src={scene3}
                         alt=""
                      />
+                  )}
+                  <SectionTitle title='Сцена "Майстер-класи для дітей"' />
+                  <Wrapper>
+                     <SceneList list={sceneMasterClass} />
+                     {isDesktop && (
+                        <img
+                           src={scene3}
+                           alt=""
+                        />
+                     )}
                   </Wrapper>
                </Section>
                <MainBtn type="button">Дізнатися більше</MainBtn>
@@ -111,7 +137,7 @@ export const App = () => {
                <Container>
                   <FooterWrapperTop>
                      <h2>Контакти</h2>
-                     <div style={{ width: '50%' }}>
+                     <div>
                         <div>
                            <p>
                               Якщо у вас виникають питання – <br /> телефонуйте за номером
@@ -126,14 +152,9 @@ export const App = () => {
                               <span>0-987-654-321</span>
                            </a>
                         </div>
-                        <div style={{ marginTop: '55px' }}>
+                        <div name="links">
                            <p>Або пишіть нам у чат-бот</p>
-                           <div
-                              style={{
-                                 display: 'flex',
-                                 gap: '15px',
-                              }}
-                           >
+                           <div>
                               <a
                                  href="https://web.telegram.org/"
                                  target="_blank"
